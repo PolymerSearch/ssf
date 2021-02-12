@@ -751,7 +751,7 @@ function eval_fmt(fmt, v, opts, flen) {
 			case ' ': out[out.length] = {t:c, v:c}; ++i; break;
 			case '$': out[out.length] = {t:'t', v:'$'}; ++i; break;
 			default:
-				if(",$-+/():!^&'~{}<>=€acfijklopqrtuvwxzP".indexOf(c) === -1) throw new Error('unrecognized character ' + c + ' in ' + fmt);
+				if(",$-+/():!^&'~{}<>=%€acfijklopqrtuvwxzP".indexOf(c) === -1) throw new Error('unrecognized character ' + c + ' in ' + fmt);
 				out[out.length] = {t:'t', v:c}; ++i; break;
 		}
 	}
